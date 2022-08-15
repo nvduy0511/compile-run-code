@@ -9,7 +9,9 @@ var cors = require("cors"); //use this
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 
 // Total languages supported
 const supportedLanguages = ["java", "cpp", "py", "c", "js", "go", "cs"];
